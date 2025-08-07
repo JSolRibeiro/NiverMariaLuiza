@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Headland One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font: 16px;
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  height: 26rem;
+  background-image: url("./assets/jardim.svg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 9rem;
+  margin-top: 4rem;
+}
+
+.bodySite,
+.footer {
+  background-color: #fad6d0;
+  padding: 1.5rem 0;
+}
+
+.bodySite h1 {
+  font-size: 1.2rem;
+  color: #d77596;
+  text-align: center;
+}
+
+.name {
+  font-family: "MonteCarlo", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4.5rem;
+}
+
+.List {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.List ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
+}
+
+.List ul li {
+  width: 100%;
+  line-height: 0.8rem;
+}
+
+.List ul li a {
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: #cf537d;
+  gap: 1rem;
+}
+
+.List > div {
+  flex: 1 1 calc(33.333% - 20px);
+  padding: 16px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.List div span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d77596;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  margin: 0 auto 8px;
+  padding: 0.5rem;
+}
+
+.List div p {
+  color: #cf537d;
+  text-align: center;
+  margin: 7px 0;
+}
+
+.List div span img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.subLinks {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0.5rem 0;
+}
+
+.footer {
+  text-align: center;
+  color: #bb3e68;
+  font-size: 0.8rem;
+}
+
+.footer_data {
+  padding: 1rem;
+  gap: 1rem;
+  align-items: center;
+  display: flex;
+  text-align: right;
+  font-size: 0.8rem;
+}
