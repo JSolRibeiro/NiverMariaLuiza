@@ -1,6 +1,6 @@
 import "./App.css";
 import ExpandableItem from "./components/ExpandableItem";
-
+import PixLightbox from "./components/PixLightbox";
 import logo from "./assets/logo.svg";
 import dress from "./assets/dress.svg";
 import perfum from "./assets/perfum.svg";
@@ -45,7 +45,7 @@ function App() {
               />
 
               <ExpandableItem
-                label="CALÇAS E BERMUDAS - 36"
+                label="CALÇAS E BERMUDAS - 38"
                 links={[
                   {
                     name: "JOICE BOUTIQUE",
@@ -122,6 +122,24 @@ function App() {
                   },
                 ]}
               />
+
+              <ExpandableItem
+                label="O BOTICÁRIO"
+                links={[
+                  {
+                    name: "WE LOVE PERFUMARIA",
+                    url: "https://www.instagram.com/weloveperfumaria?igsh=MTJxdGIwbmJjNTF1NA==",
+                  },
+                  {
+                    name: "O BOTICÁRIO CAPANEMA",
+                    url: "https://www.instagram.com/oboticariocapanema?igsh=MWFqcDFmemt0eDhzcQ==",
+                  },
+                  {
+                    name: "REQUINTE",
+                    url: "https://www.instagram.com/requinterf?igsh=MXg2NTkyN3ZvcWVsaw==",
+                  },
+                ]}
+              />
             </ul>
           </div>
 
@@ -163,28 +181,7 @@ function App() {
               <img src={pix} className="pix" />
             </span>
             <p>PIX</p>
-            <ul>
-              <li>
-                <a href="#" target="_blank">
-                  R$ 150,00
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank">
-                  R$ 200,00
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank">
-                  R$ 250,00
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank">
-                  R$ 300,00
-                </a>
-              </li>
-            </ul>
+            <PixLightbox />
           </div>
         </div>
       </main>
