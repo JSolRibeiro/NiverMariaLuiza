@@ -1,121 +1,93 @@
 import { useState } from "react";
-import qr150 from "../assets/qr150.png";
-import qr200 from "../assets/qr200.png";
-import qr250 from "../assets/qr250.png";
-import qr300 from "../assets/qr300.png";
 
-const pixOptions = [
-  {
-    label: "R$ 150,00",
-    qr: qr150,
-    code: "00020126330014BR.GOV.BCB.PIX0111040442502005204000053039865406150.005802BR5923Maria Luiza Ramos Canto6009SAO PAULO62140510ZohONunJJr6304E42E",
-  },
-  {
-    label: "R$ 200,00",
-    qr: qr200,
-    code: "00020126330014BR.GOV.BCB.PIX0111040442502005204000053039865406200.005802BR5923Maria Luiza Ramos Canto6009SAO PAULO6214051046rsY9J5M06304A4C6",
-  },
-  {
-    label: "R$ 250,00",
-    qr: qr250,
-    code: "00020126330014BR.GOV.BCB.PIX0111040442502005204000053039865406250.005802BR5923Maria Luiza Ramos Canto6009SAO PAULO621405104N10Urn3Sf6304B52E",
-  },
-  {
-    label: "R$ 300,00",
-    qr: qr300,
-    code: "00020126330014BR.GOV.BCB.PIX0111040442502005204000053039865406300.005802BR5923Maria Luiza Ramos Canto6009SAO PAULO62140510HvgkMgbHP663047379",
-  },
-];
+function PixLightbox({ valor, qrCode, codigoPix }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
 
-export default function PixLightbox() {
-  const [selected, setSelected] = useState(null);
+  const copiarCodigo = () => {
+    navigator.clipboard.writeText(codigoPix);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
-    <div>
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        {pixOptions.map((pix, index) => (
-          <li key={index} style={{ marginBottom: "10px" }}>
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                setSelected(pix);
-              }}
-              style={{ color: "#cf537d", textDecoration: "none" }}
-            >
-              {pix.label}
-            </a>
-          </li>
-        ))}
+    <>
+      <ul>
+        <li>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsOpen(true);
+            }}
+          >
+            {valor}
+          </a>
+        </li>
       </ul>
 
-      {selected && (
-        <div
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            background: "rgba(0, 0, 0, 0.6)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 1000,
-          }}
-          onClick={() => setSelected(null)}
-        >
-          <div
-            style={{
-              background: "white",
-              padding: "20px",
-              borderRadius: "8px",
-              textAlign: "center",
-              position: "relative",
-              maxWidth: "350px",
-            }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setSelected(null)}
-              style={{
-                position: "absolute",
-                top: "10px",
-                right: "10px",
-                background: "transparent",
-                border: "none",
-                fontSize: "20px",
-                cursor: "pointer",
-              }}
-            >
-              ✖
+      {isOpen && (
+        <div style={styles.overlay} onClick={() => setIsOpen(false)}>
+          <div style={styles.content} onClick={(e) => e.stopPropagation()}>
+            <h2 className="title">PIX {valor}</h2>
+            <img src={qrCode} alt="QR Code PIX" style={{ maxWidth: "200px" }} />
+            <p>código Pix:</p>
+            <p style={{ wordBreak: "break-all" }}>{codigoPix}</p>
+            <button onClick={copiarCodigo} style={styles.copyBtn}>
+              {copied ? "✅ Copiado!" : "📋 Copiar código"}
             </button>
-            <img
-              src={selected.qr}
-              alt={`QR Code para ${selected.label}`}
-              width={200}
-              style={{ marginBottom: "10px" }}
-            />
-            <p>
-              <strong>Código Pix:</strong>
-            </p>
-            <textarea
-              readOnly
-              style={{
-                width: "100%",
-                height: "80px",
-                resize: "none",
-                marginBottom: "8px",
-              }}
-              value={selected.code}
-            />
-            <p style={{ fontSize: "0.85rem", color: "#555" }}>
-              Copie o código acima e cole no seu app de banco na opção{" "}
-              <b>"Pix copia e cola"</b> ou escaneie o QR Code.
+            <button onClick={() => setIsOpen(false)} style={styles.closeBtn}>
+              Fechar
+            </button>
+            <p className="instruction">
+              Copie o código acima e cole no seu app de banco na opção "Pix
+              copia e cola" ou escaneie o QR Code.
             </p>
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
+
+const styles = {
+  overlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "rgba(0,0,0,0.6)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 1000,
+  },
+  content: {
+    background: "#fff",
+    padding: "20px",
+    borderRadius: "8px",
+    textAlign: "center",
+    maxWidth: "300px",
+  },
+  copyBtn: {
+    marginTop: "10px",
+    padding: "8px 12px",
+    background: "#4CAF50",
+    color: "#fff",
+    border: "none",
+    borderRadius: "4px",
+    cursor: "pointer",
+  },
+  closeBtn: {
+    marginTop: "10px",
+    padding: "8px 12px",
+    background: "#d9534f",
+    color: "#fff",
+    border: "none",
+    borderRadius: "4px",
+    cursor: "pointer",
+  },
+};
+
+export default PixLightbox;

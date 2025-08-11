@@ -8,6 +8,16 @@
   text-decoration: none;
 }
 
+p.instruction {
+  color: #333 !important;
+  font-size: 0.8rem;
+  margin-top: 1rem !important;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
 .header {
   width: 100%;
   height: 26rem;

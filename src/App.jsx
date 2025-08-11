@@ -1,6 +1,10 @@
 import "./App.css";
 import ExpandableItem from "./components/ExpandableItem";
 import PixLightbox from "./components/PixLightbox";
+import pixQR150 from "./assets/qr150.png";
+import pixQR200 from "./assets/qr200.png";
+import pixQR250 from "./assets/qr250.png";
+import pixQR300 from "./assets/qr300.png";
 import logo from "./assets/logo.svg";
 import dress from "./assets/dress.svg";
 import perfum from "./assets/perfum.svg";
@@ -31,15 +35,15 @@ function App() {
                 links={[
                   {
                     name: "JOICE BOUTIQUE",
-                    url: "https://www.instagram.com/joiceboutique?igsh=MWJicHp5Z21xNHp0cw==",
+                    url: "https://www.instagram.com/joiceboutique/?igsh=MWJicHp5Z21xNHp0cw%3D%3D#",
                   },
                   {
                     name: "PINGO DE GENTE",
-                    url: "https://www.instagram.com/piingodegentte?igsh=anl6bmg2b3ozcXYw",
+                    url: "https://www.instagram.com/piingodegentte/?igsh=anl6bmg2b3ozcXYw#",
                   },
                   {
                     name: "REQUINTE",
-                    url: "https://www.instagram.com/requinterf?igsh=MXg2NTkyN3ZvcWVsaw==",
+                    url: "https://www.instagram.com/requinterf/?igsh=MXg2NTkyN3ZvcWVsaw%3D%3D#",
                   },
                 ]}
               />
@@ -49,15 +53,15 @@ function App() {
                 links={[
                   {
                     name: "JOICE BOUTIQUE",
-                    url: "https://www.instagram.com/joiceboutique?igsh=MWJicHp5Z21xNHp0cw==",
+                    url: "https://www.instagram.com/joiceboutique/?igsh=MWJicHp5Z21xNHp0cw%3D%3D#",
                   },
                   {
                     name: "PINGO DE GENTE",
-                    url: "https://www.instagram.com/piingodegentte?igsh=anl6bmg2b3ozcXYw",
+                    url: "https://www.instagram.com/piingodegentte/?igsh=anl6bmg2b3ozcXYw#",
                   },
                   {
                     name: "REQUINTE",
-                    url: "https://www.instagram.com/requinterf?igsh=MXg2NTkyN3ZvcWVsaw==",
+                    url: "https://www.instagram.com/requinterf/?igsh=MXg2NTkyN3ZvcWVsaw%3D%3D#",
                   },
                 ]}
               />
@@ -75,7 +79,7 @@ function App() {
                 links={[
                   {
                     name: "WE LOVE PERFUMARIA",
-                    url: "https://www.instagram.com/weloveperfumaria?igsh=MTJxdGIwbmJjNTF1NA==",
+                    url: "https://www.instagram.com/weloveperfumaria/?igsh=MTJxdGIwbmJjNTF1NA%3D%3D#",
                   },
                   {
                     name: "O BOTICÁRIO CAPANEMA",
@@ -83,7 +87,7 @@ function App() {
                   },
                   {
                     name: "REQUINTE",
-                    url: "https://www.instagram.com/requinterf?igsh=MXg2NTkyN3ZvcWVsaw==",
+                    url: "https://www.instagram.com/requinterf/?igsh=MXg2NTkyN3ZvcWVsaw%3D%3D#",
                   },
                 ]}
               />
@@ -93,7 +97,7 @@ function App() {
                 links={[
                   {
                     name: "WE LOVE PERFUMARIA",
-                    url: "https://www.instagram.com/weloveperfumaria?igsh=MTJxdGIwbmJjNTF1NA==",
+                    url: "https://www.instagram.com/weloveperfumaria/?igsh=MTJxdGIwbmJjNTF1NA%3D%3D#",
                   },
                   {
                     name: "O BOTICÁRIO CAPANEMA",
@@ -101,7 +105,7 @@ function App() {
                   },
                   {
                     name: "REQUINTE",
-                    url: "https://www.instagram.com/requinterf?igsh=MXg2NTkyN3ZvcWVsaw==",
+                    url: "https://www.instagram.com/requinterf/?igsh=MXg2NTkyN3ZvcWVsaw%3D%3D#",
                   },
                 ]}
               />
@@ -110,7 +114,7 @@ function App() {
                 links={[
                   {
                     name: "WE LOVE PERFUMARIA",
-                    url: "https://www.instagram.com/weloveperfumaria?igsh=MTJxdGIwbmJjNTF1NA==",
+                    url: "https://www.instagram.com/weloveperfumaria/?igsh=MTJxdGIwbmJjNTF1NA%3D%3D#",
                   },
                   {
                     name: "O BOTICÁRIO CAPANEMA",
@@ -118,7 +122,7 @@ function App() {
                   },
                   {
                     name: "REQUINTE",
-                    url: "https://www.instagram.com/requinterf?igsh=MXg2NTkyN3ZvcWVsaw==",
+                    url: "https://www.instagram.com/requinterf/?igsh=MXg2NTkyN3ZvcWVsaw%3D%3D#",
                   },
                 ]}
               />
@@ -128,15 +132,15 @@ function App() {
                 links={[
                   {
                     name: "WE LOVE PERFUMARIA",
-                    url: "https://www.instagram.com/weloveperfumaria?igsh=MTJxdGIwbmJjNTF1NA==",
+                    url: "https://www.instagram.com/weloveperfumaria/?igsh=MTJxdGIwbmJjNTF1NA%3D%3D#",
                   },
                   {
                     name: "O BOTICÁRIO CAPANEMA",
-                    url: "https://www.instagram.com/oboticariocapanema?igsh=MWFqcDFmemt0eDhzcQ==",
+                    url: "https://www.instagram.com/oboticariocapanema/?igsh=MWFqcDFmemt0eDhzcQ%3D%3D#",
                   },
                   {
                     name: "REQUINTE",
-                    url: "https://www.instagram.com/requinterf?igsh=MXg2NTkyN3ZvcWVsaw==",
+                    url: "https://www.instagram.com/requinterf/?igsh=MXg2NTkyN3ZvcWVsaw%3D%3D#",
                   },
                 ]}
               />
@@ -148,7 +152,7 @@ function App() {
               <img src={maquiagem} className="maquiagem" />
             </span>
             <a
-              href="https://www.instagram.com/insanepalettenew?igsh=MTN0dm5zZzA0b2loNQ=="
+              href="https://www.instagram.com/insanepalettenew/?igsh=MTN0dm5zZzA0b2loNQ%3D%3D#"
               target="_blank"
             >
               <p>MAQUIAGENS</p>
@@ -166,11 +170,11 @@ function App() {
                 links={[
                   {
                     name: "DEJÔ SAPATOS",
-                    url: "https://www.instagram.com/dejosapatos?igsh=MW9zeWR0azA5bjd3Mw==",
+                    url: "https://www.instagram.com/dejosapatos/?igsh=MW9zeWR0azA5bjd3Mw%3D%3D#",
                   },
                   {
                     name: "REQUINTE",
-                    url: "https://www.instagram.com/requinterf?igsh=MXg2NTkyN3ZvcWVsaw==",
+                    url: "https://www.instagram.com/requinterf/?igsh=MXg2NTkyN3ZvcWVsaw%3D%3D#",
                   },
                 ]}
               />
@@ -181,7 +185,26 @@ function App() {
               <img src={pix} className="pix" />
             </span>
             <p>PIX</p>
-            <PixLightbox />
+            <PixLightbox
+              valor="R$ 150,00"
+              qrCode={pixQR150}
+              codigoPix="00020126330014BR.GOV.BCB.PIX0111040442502005204000053039865406150.005802BR5923Maria Luiza Ramos Canto6009SAO PAULO62140510ZohONunJJr6304E42E"
+            />
+            <PixLightbox
+              valor="R$ 200,00"
+              qrCode={pixQR200}
+              codigoPix="00020126330014BR.GOV.BCB.PIX0111040442502005204000053039865406200.005802BR5923Maria Luiza Ramos Canto6009SAO PAULO6214051046rsY9J5M06304A4C6"
+            />
+            <PixLightbox
+              valor="R$ 250,00"
+              qrCode={pixQR250}
+              codigoPix="00020126330014BR.GOV.BCB.PIX0111040442502005204000053039865406250.005802BR5923Maria Luiza Ramos Canto6009SAO PAULO621405104N10Urn3Sf6304B52E"
+            />
+            <PixLightbox
+              valor="R$ 300,00"
+              qrCode={pixQR300}
+              codigoPix="00020126330014BR.GOV.BCB.PIX0111040442502005204000053039865406300.005802BR5923Maria Luiza Ramos Canto6009SAO PAULO62140510HvgkMgbHP663047379"
+            />
           </div>
         </div>
       </main>
